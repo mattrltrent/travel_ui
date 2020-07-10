@@ -21,7 +21,6 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
-  device_preview: ^0.4.5
   flutter:
     sdk: flutter
 
@@ -72,6 +71,14 @@ flutter:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
-  #
+
+  fonts:
+    - family: Ub
+      fonts:
+        - asset: fonts/Ubuntu-Regular.ttf
+
+  assets:
+     - images/
+
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

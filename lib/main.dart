@@ -1,21 +1,18 @@
 import 'package:flutter/material.dart';
-import 'screens/home_screen.dart';
-import 'package:device_preview/device_preview.dart';
+import 'screens/home_screen/home_screen.dart';
+import 'package:flutter/services.dart';
 
-void main() => runApp(
-  DevicePreview(
-    enabled: true,
-    builder: (context) => MyApp(),
-  ),
-);
+void main() {
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      locale: DevicePreview.of(context).locale, // <--- Add the locale
-      builder: DevicePreview.appBuilder, // <--- Add the builder
       home: HomeScreen(),
     );
   }
